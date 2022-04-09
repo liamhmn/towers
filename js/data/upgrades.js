@@ -6,9 +6,9 @@ let upgrades = {
         disp(x) { return "×" + format(this.effect(x), 0); },
         max: EN("ee1000"),
         costType: "points",
-        cost(x) { return EN(1500).mul(EN.pow(3, x.pow(1.2))); },
+        cost(x) { return EN(1.5).mul(EN.pow(3, x.pow(1.2))); },
         inv(x) { return x.div(1500).logBase(3).root(1.2).floor().max(-1); },
-        effect(x) { return EN.pow(2, x); },
+        effect(x) { return EN.pow(2.9, x); },
     },
     "f1_1": {
         category: "Fame",
@@ -17,9 +17,9 @@ let upgrades = {
         disp(x) { return "^" + format(this.effect(x)); },
         max: EN(2e16),
         costType: "points",
-        cost(x) { return EN(500).pow(EN.pow(1.12, x)).mul(10); },
+        cost(x) { return EN(1.500).pow(EN.pow(1.12, x)).mul(10); },
         inv(x) { return x.div(10).logBase(500).logBase(1.12).floor().max(-1); },
-        effect(x) { return EN.mul(0.05, x).add(1); },
+        effect(x) { return EN.mul(0.05, x).add(4); },
     },
     "f1_2": {
         category: "Fame",
