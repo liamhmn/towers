@@ -21,6 +21,6 @@ let autos = {
     },
     windElem: {
         title: "Spell of Wind",
-        req: ["m2"],
+        req: ["f2"],
     },
 }
