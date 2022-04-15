@@ -54,7 +54,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(1.00000).mul(EN.pow(1.5, x)); },
         inv(x) { return x.div(100000).logBase(1.5).floor().max(-1); },
-        effect(x) { return x.mul(2).add(10); },
+        effect(x) { return x.mul(2).add(1000000); },
     },
     "f2_2": {
         category: "Realm",
