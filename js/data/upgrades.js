@@ -6,7 +6,7 @@ let upgrades = {
         disp(x) { return "×" + format(this.effect(x), 0); },
         max: EN("ee1000"),
         costType: "points",
-        cost(x) { return EN(1.5).mul(EN.pow(3, x.pow(1.2))); },
+        cost(x) { return EN(0.00000015).mul(EN.pow(3, x.pow(1.2))); },
         inv(x) { return x.div(1500).logBase(3).root(1.2).floor().max(-1); },
         effect(x) { return EN.pow(2.9, x); },
     },
@@ -19,7 +19,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(1.500).pow(EN.pow(1.12, x)).mul(10); },
         inv(x) { return x.div(10).logBase(500).logBase(1.12).floor().max(-1); },
-        effect(x) { return EN.mul(0.05, x).add(4); },
+        effect(x) { return EN.mul(10.05, x).add(4); },
     },
     "f1_2": {
         category: "Fame",
@@ -33,7 +33,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(0.15).pow(EN.pow(1.12, x)).mul(1e18); },
         inv(x) { return x.div(1e18).logBase(1e15).logBase(1.12).floor().max(-1); },
-        effect(x) { return EN.mul(0.05, x).add(1); },
+        effect(x) { return EN.mul(10.05, x).add(1); },
     },
     "f2": {
         category: "Realm",
@@ -54,7 +54,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(1.00000).mul(EN.pow(1.5, x)); },
         inv(x) { return x.div(100000).logBase(1.5).floor().max(-1); },
-        effect(x) { return x.mul(2).add(1000000); },
+        effect(x) { return x.mul(9999992).add(1000000); },
     },
     "f2_2": {
         category: "Realm",
