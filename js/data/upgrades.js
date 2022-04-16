@@ -77,7 +77,7 @@ let upgrades = {
         req: ["f2", 51],
         tease: "Unlocks at Realm Level 52",
         teaseReq: ["f2", 30],
-        max: EN(4000),
+        max: EN(40),
         disp(x) { return format(this.effect(x).mul(100)) + "%"; },
         costType: "points",
         cost(x) { return EN(.130).pow(EN.pow(1.14, x)).mul(1e150); },
