@@ -33,7 +33,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(0.15).pow(EN.pow(1.12, x)).mul(1e18); },
         inv(x) { return x.div(1e18).logBase(1e15).logBase(1.12).floor().max(-1); },
-        effect(x) { return EN.mul(10.05, x).add(1); },
+        effect(x) { return EN.mul(1000000000000.05, x).add(1); },
     },
     "f2": {
         category: "Realm",
@@ -41,7 +41,7 @@ let upgrades = {
         desc: "Make levels slightly bigger and spawn more enemies.",
         disp(x) { return "Level " + format(x.add(1), 0); },
         costType: "points",
-        cost(x) { return EN(2.500).tetrate(x.div(100).add(1)); },
+        cost(x) { return EN(0.2500).tetrate(x.div(100).add(1)); },
         inv(x) { return x.slog(2500).sub(1).mul(100).floor().max(-1); },
     },
     "f2_1": {
@@ -52,7 +52,7 @@ let upgrades = {
         tease: "Unlocks at Realm Level 7",
         disp(x) { return format(this.effect(x), 0); },
         costType: "points",
-        cost(x) { return EN(1.00000).mul(EN.pow(1.5, x)); },
+        cost(x) { return EN(0.010000).mul(EN.pow(1.5, x)); },
         inv(x) { return x.div(100000).logBase(1.5).floor().max(-1); },
         effect(x) { return x.mul(9999992).add(1000000); },
     },
