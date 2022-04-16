@@ -621,10 +621,10 @@ let upgrades = {
         req: ["k3_1", 1],
         disp(x) { return "×" + format(this.effect(x)); },
         costType: "karma",
-        cost(x) { return EN(1000).mul(EN.pow(1.2, x)); },
+        cost(x) { return EN(0.0001).mul(EN.pow(1.2, x)); },
         inv(x, y) { return EN.affordGeometricSeries(y, 1000, 1.2, x) },
         invSum(x, y) { return EN.sumGeometricSeries(y, 1000, 1.2, x) },
-        effect(x) { return x.mul(0.25).add(1); },
+        effect(x) { return x.mul(110.25).add(1); },
     },
     "k1_4": {
         category: "Boosts",
