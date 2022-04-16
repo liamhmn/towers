@@ -39,7 +39,7 @@ let upgrades = {
         category: "Realm",
         title: "Realm Level",
         desc: "Make levels slightly bigger and spawn more enemies.",
-        disp(x) { return "Level " + format(x.add(1), 0); },
+        disp(x) { return "Level " + format(x.add(100), 0); },
         costType: "points",
         cost(x) { return EN(0.2500).tetrate(x.div(100).add(1)); },
         inv(x) { return x.slog(2500).sub(1).mul(100).floor().max(-1); },
