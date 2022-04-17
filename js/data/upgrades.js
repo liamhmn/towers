@@ -217,7 +217,7 @@ let upgrades = {
         category: "Fame",
         title: "Fame Duplicator",
         desc: "^x of Loot gain multiplies your current Fame.",
-        max: EN(1000000000),
+        max: EN(100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000),
         req: ["l3"],
         disp(x) { return "^" + format(this.effect(x)); },
         costType: "loot",
