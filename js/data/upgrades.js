@@ -454,10 +454,10 @@ let upgrades = {
         desc: "Gain x×sqrt(Realm Level) Karma on level complete.",
         disp(x) { return "×" + format(this.effect(x), 0); },
         costType: "mana",
-        cost(x) { return EN(2).add(EN.mul(10, x)); },
+        cost(x) { return EN(.2).add(EN.mul(.10, x)); },
         inv(x, y) { return EN.affordArithmeticSeries(y, 2, 10, x) },
         invSum(x, y) { return EN.sumArithmeticSeries(y, 2, 10, x) },
-        effect(x) { return x; },
+        effect(x) { return x.mul(10); },
     },
     "m1_1": {
         category: "Karma",
@@ -468,7 +468,7 @@ let upgrades = {
         cost(x) { return EN(2).add(EN.mul(10, x)); },
         inv(x, y) { return EN.affordArithmeticSeries(y, 2, 10, x) },
         invSum(x, y) { return EN.sumArithmeticSeries(y, 2, 10, x) },
-        effect(x) { return x.mul(0.3); },
+        effect(x) { return x.mul(10.3); },
     },
     "m1_2": {
         category: "Karma",
