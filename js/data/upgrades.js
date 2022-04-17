@@ -8,7 +8,7 @@ let upgrades = {
         costType: "points",
         cost(x) { return EN(0.00000015).mul(EN.pow(3, x.pow(1.2))); },
         inv(x) { return x.div(1500).logBase(3).root(1.2).floor().max(-1); },
-        effect(x) { return EN.pow(2000.9, x); },
+        effect(x) { return EN.pow(20000000000000000000000000000000000000000000.9, x); },
     },
     "f1_1": {
         category: "Fame",
